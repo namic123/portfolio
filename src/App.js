@@ -50,13 +50,13 @@ function App(props) {
           <Image src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"} boxShadow={"0 0 2rem black"}/>
         </div>
         <div className="about-content">
-          <h2 className="heading">About<span>Me</span></h2>
+          <h2 className="heading">About <span>Me</span></h2>
           <h3>FullStack Developer</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, cum cupiditate excepturi explicabo facilis illo minima minus neque nesciunt obcaecati perferendis rerum sed sit tenetur vel vero voluptatum! Est, ratione.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi debitis ducimus ea enim eveniet ipsa iure labore magnam, modi molestias mollitia non optio qui quia reprehenderit tempora veniam voluptates?
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, animi, atque beatae blanditiis commodi doloribus, esse et hic in incidunt molestiae porro possimus ratione temporibus tenetur ullam vel veritatis! Sint.</p>
+          <a href="#" className="btn">Read More</a>
         </div>
-        <a href="#" className="btn">Read More</a>
       </section>
     </div>
   );
