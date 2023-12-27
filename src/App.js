@@ -18,14 +18,14 @@ function App(props) {
         <a href="#" className="logo">Porfolio</a>
         <i className='bx bx-menu' id="menu-icon"></i>
         <nav className="navbar">
-          <a href="#home" className="active" >Home</a>
+          <a href="#home" className="active" >Intro</a>
           <a href="#about">About</a>
-          <a href="#service">Service</a>
+          <a href="#skills">Skills</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
-      {/* 홈화면 */}
+      {/* Intro 화면 */}
       <section className="home" id="home">
         <div className="home-img">
           <Image src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"}
@@ -58,6 +58,35 @@ function App(props) {
           <a href="#" className="btn">Read More</a>
         </div>
       </section>
+
+      {/*Skill 화면*/}
+      <section className="skills" id="skills">
+        <h2 className="heading">My <span>Skills</span></h2>
+        <div className="skills-container">
+
+          <div className="skills-box">
+            <i className='bx bxl-html5'></i>
+            <h3>Front-End</h3>
+            <a href="#" className="btn">Read More</a>
+          </div>
+          <div className="skills-box">
+            <i className='bx bxl-html5'></i>
+            <h3>Back-End</h3>
+            <a href="#" className="btn">Read More</a>
+          </div>
+          <div className="skills-box">
+            <i className='bx bxl-html5'></i>
+            <h3>More</h3>
+            <a href="#" className="btn">Read More</a>
+          </div>
+          <div className="skills-box">
+            <i className='bx bxl-html5'></i>
+            <h3>More</h3>
+            <a href="#" className="btn">Read More</a>
+          </div>
+        </div>
+      </section>
+      {/* Project 화면 */}
     </div>
   );
 }
