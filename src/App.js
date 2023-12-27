@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "./css/style.css";
 import {Box, Image} from "@chakra-ui/react";
 import mainPic from "./img/KakaoTalk_20231227_025533035-removebg.png";
@@ -13,23 +13,58 @@ function App(props) {
     link.rel = 'stylesheet';
     document.head.appendChild(link);
   }, []);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldStick = window.scrollY > 100;
+      setIsSticky(shouldStick);
+      const refs = [homeRef, aboutRef, skillsRef, projectRef, contactRef];
+      const currentSection = refs.find(ref => {
+        const element = ref.current;
+        if (!element) return false;
+        const offsetTop = element.offsetTop;
+        const offsetHeight = element.offsetHeight;
+        return window.scrollY >= offsetTop - 150 && window.scrollY < offsetTop + offsetHeight;
+      });
+      if (currentSection && currentSection.current) {
+        setActiveSection(currentSection.current.id);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="container">
-      <header className="header">
-        <a href="#" className="logo">Porfolio</a>
-        <i className='bx bx-menu' id="menu-icon"></i>
-        <nav className="navbar">
-          <a href="#home" className="active" >Intro</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#project">Project</a>
-          <a href="#contact">Contact</a>
+      <header className={`header ${isSticky ? 'sticky' : ''}`}>
+        <a href="#" className="logo">Portfolio</a>
+        <i className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu}></i>
+        <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
+          <a href="#home" className={activeSection === 'home' ? 'active' : ''} >Intro</a>
+          <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
+          <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
+          <a href="#project" className={activeSection === 'project' ? 'active' : ''}>Project</a>
+          <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
         </nav>
       </header>
       {/* Intro 화면 */}
-      <section className="home" id="home">
+      <section className="home" id="home"  ref={homeRef}>
         <div className="home-img">
-          <Image src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"}
+          <Image className="home-image" src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"}
           boxShadow={"0 0 2rem var(--main-color)"}/>
         </div>
         <div className="home-content">
@@ -46,9 +81,9 @@ function App(props) {
         </div>
       </section>
       {/*about 화면*/}
-      <section className="about" id="about">
+      <section className="about" id="about"  ref={aboutRef}>
         <div className="about-img">
-          <Image src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"} boxShadow={"0 0 2rem black"}/>
+          <Image className="about-image" src={mainPic} alt="" w={"22vw"} bg={"linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289)"} borderRadius={"50%"} boxShadow={"0 0 2rem black"}/>
         </div>
         <div className="about-content">
           <h2 className="heading">About <span>Me</span></h2>
@@ -61,7 +96,7 @@ function App(props) {
       </section>
 
       {/*Skill 화면*/}
-      <section className="skills" id="skills">
+      <section className="skills" id="skills"  ref={skillsRef}>
         <h2 className="heading">My <span>Skills</span></h2>
         <div className="skills-container">
 
@@ -88,7 +123,7 @@ function App(props) {
         </div>
       </section>
       {/* Project 화면 */}
-      <section className="project" id="project">
+      <section className="project" id="project"  ref={projectRef}>
         <h2 className="heading">Latest <span>Project</span></h2>
         <div className="project-container">
           <div className="project-box">
@@ -141,6 +176,12 @@ function App(props) {
           </div>
         </div>
       </section>
+      {/*footer*/}
+      <footer className="footer">
+        <div className="footer-iconTop">
+          <a href="#home"></a>
+        </div>
+      </footer>
     </div>
   );
 }
