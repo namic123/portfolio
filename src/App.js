@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import "./css/style.css";
 import {Box, Image} from "@chakra-ui/react";
 import mainPic from "./img/KakaoTalk_20231227_025533035-removebg.png";
+import project1 from "./img/project1.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBlog} from "@fortawesome/free-solid-svg-icons";
 
@@ -21,7 +22,7 @@ function App(props) {
           <a href="#home" className="active" >Intro</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#project">Project</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -87,6 +88,59 @@ function App(props) {
         </div>
       </section>
       {/* Project 화면 */}
+      <section className="project" id="project">
+        <h2 className="heading">Latest <span>Project</span></h2>
+        <div className="project-container">
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer" >
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer">
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer">
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer">
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer">
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project1}  className="project-image"/>
+            <div className="project-layer">
+              <h4>Web Design</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid aperiam, assumenda blanditiis commodi dolore esse, explicabo impedit ipsa nam, pariatur porro quam quibusdam quidem rem repudiandae sunt totam vel.</p>
+              <a href="http://3.39.233.240:8082/"><i className='bx bx-link-external' ></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
