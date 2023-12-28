@@ -11,8 +11,8 @@
 :root{
     --bg-color :#1f242d;
     --second-bg-color :#323946;
-    --text-color :#fff;
-    --main-color :tomato;
+    --text-color :#dcdcdc;
+    --main-color :#0ef;
 }
 
 html{
@@ -88,15 +88,39 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .home-img{
-    margin-right: 4rem;
+    margin-right: 10rem;
+}
+
+.home-img .home-image{
+    width:20vw;
+    background: linear-gradient(to top, #1F242D,#232833, #333841, #3f4654, #565c66, #7e8289);
+    border-radius: 50%;
+    box-shadow: 0 0 3rem white;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-2.4rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
 }
 
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+}
+.home-content .typed-js{
+    min-width: 40vw;
 }
 
 .home-content h3:nth-of-type(2){
@@ -108,14 +132,30 @@ span{
 }
 
 .home-content h1 {
-    font-size: 5.6rem;
+    font-size: 4.9rem;
     font-weight: 700;
     line-height: 1.3;
+}
+.home-content h1 span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color:var(--text-color);
 }
 
 .home-content p{
     font-size:1.6rem;
 }
+.home-content p span{
+    color: #fa705b;
+    font-weight: 600;
+}
+
+.home-content .home-content-footer{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:var(--main-color);
+}
+
 .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -176,12 +216,63 @@ span{
 
 .about-content h3{
     font-size: 2.6rem;
+    margin-bottom: 2rem;
 }
 .about-content p{
     font-size: 1.6rem;
     margin:2rem 0 3rem;
 }
 
+.about-profile{
+    font-size: 1.8rem;
+}
+.about-profile span{
+    color:black;
+    font-weight: 700;
+    text-shadow: -1px 0 var(--main-color), 0 1px var(--main-color), 1px 0 var(--main-color), 0 -1px var(--main-color);
+}
+/*------------ Repository ---------------*/
+.repository h2{
+    margin-bottom: 5rem;
+}
+
+.repository-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.repository-container .repository-box{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.repository-container .repository-box:hover{
+    border-color:var(--main-color);
+    transform:scale(1.02);
+}
+
+.repository-img .repository-image{
+    width: 10vw;
+    background-color: white;
+    border-radius: 20%;
+}
+
+.repository-box h3{
+    font-size: 2.6rem;
+}
+
+.repository-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
 /*------------ Skills---------------*/
 
 .skills h2{
@@ -315,6 +406,9 @@ transition: .5s ease;
     html{
         font-size: 55%;
     }
+    .home-content .typed-js{
+        width:50vw;
+    }
 }
 
 
@@ -323,11 +417,45 @@ transition: .5s ease;
         padding: 2rem 3%;
     }
     section{
-        padding: 10rem 3% 2rem;
+        padding: 6rem 3% 2rem;
+    }
+    .skills{
+        padding-bottom: 7rem;
+    }
+    .repository{
+        padding-bottom: 7rem;
+    }
+    .project{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
     }
 }
 
 @media (max-width:768px) {
+    .home-img{
+        margin-right: 0;
+    }
+
+    .home-content h3{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    .home-content h1{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+    }
+    .home-content .typed-js{
+        width:90vw;
+    }
+    .home-content p{
+        display: flex;
+        justify-content: center;
+    }
     #menu-icon{
         display: block;
     }
@@ -362,7 +490,7 @@ transition: .5s ease;
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4.2rem;
     }
     .home-img .home-image{
         width:70vw;
@@ -375,5 +503,40 @@ transition: .5s ease;
     .about-img .about-image{
         width:70vw;
         margin-bottom: 4rem;
+    }
+
+    .skills h2{
+        margin-bottom: 3rem;
+    }
+    .repository h2{
+        margin-bottom: 3rem;
+    }
+    .project h2{
+        margin-bottom: 3rem;
+    }
+
+    .project-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:617px) {
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:365px) {
+    .home-img .home-image{
+        width:90vw;
+    }
+    .about-img .about-image{
+        width:90vw;
     }
 }
