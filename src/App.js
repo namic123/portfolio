@@ -1,7 +1,14 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./css/style.css";
 import {Box, Image} from "@chakra-ui/react";
+import homePic from "./img/KakaoTalk_20231228_142341381.jpg";
 import mainPic from "./img/KakaoTalk_20231227_025533035-removebg.png";
+import htmlLogo from "./img/html-logo.png";
+import cssLogo from "./img/css-logo.png";
+import jsLogo from "./img/js-logo.png";
+import reactLogo from "./img/react-logo.png";
+import axiosLogo from "./img/axios-logo.png";
+import chakraLogo from "./img/chakra-logo.png";
 import project1 from "./img/project1.png";
 import githubLogo from "./img/GitHub-Logo.png";
 import tstoryLogo from "./img/tstoryLogo.png";
@@ -39,8 +46,8 @@ function App(props) {
 
     ScrollReveal().reveal('.home-content, .heading', { ...config, origin: 'top' });
     ScrollReveal().reveal('.home-img, .skills-container, .repository-container, .project-box', { ...config, origin: 'bottom' });
-    ScrollReveal().reveal('.home-content h1, .about-img', { ...config, origin: 'left' });
-    ScrollReveal().reveal('.home-content p, .about-content', { ...config, origin: 'right' });
+    ScrollReveal().reveal('.home-content h1, .about-img, .brackets, .about-content' ,{ ...config, origin: 'left' });
+    ScrollReveal().reveal('.home-content p, .about-content .json-content', { ...config, origin: 'right' });
   }, []);
 
   /* typed.js */
@@ -99,12 +106,13 @@ function App(props) {
       {/* Intro 화면 */}
       <section className="home" id="home"  ref={homeRef}>
         <div className="home-img">
-          <Image className="home-image" src={mainPic} alt="" />
+          <Image className="home-image" src={homePic} alt="" />
         </div>
         <div className="home-content">
           <h3>안녕하세요, 신입 풀스택 개발자</h3>
           <h1>박재성 <span>입니다.</span></h1>
           <h3 className="typed-js">저는, <span ref={el}></span></h3>
+          <br/>
           <p>새로운 기술에 대한 <span>도전을 즐기고</span></p>
           <p><span>효율적인 문제 해결을 추구</span>하는 신입 풀스택 개발자입니다.</p>
           <br/>
@@ -130,9 +138,29 @@ function App(props) {
         <div className="about-content">
           <h2 className="heading">About <span>Me</span></h2>
           <h3>FullStack Developer</h3>
-          <div className="about-profile">이름: <span>박재성</span></div>
-          <div className="about-profile">나이: <span>1996.09.15(만 27세)</span></div>
-          <div className="about-profile">연락처: <span>+82 010.8324.6149</span></div>
+          <p>저의 취미는 운동입니다.</p>
+          <p>운동을 하면서 진정한 성장은 도전과 고통을 통해 이루어진다는 것을 깨달았습니다.</p>
+          <br/>
+          <p>코딩도 마찬가지라 생각합니다.</p>
+          <p>복잡한 문제를 해결하고 어려운 기술적 장벽을 넘어서면서,</p>
+          <p> 스스로가 한층 더 강해지고 성장하고 있음을 느끼고 있습니다.</p>
+          <br/>
+          <br/>
+          <p>저는 새로운 기술과 프로젝트에 대한 도전을 두려워하지 않습니다.</p>
+          <p>오히려, 그 안에서 발견되는 문제들과 그 해결 과정에서 큰 즐거움과 만족을 느낍니다.</p>
+          <br/>
+          <p>저는 이러한 도전을 즐기며, 어떠한 기술적 난관도 극복할 준비가 되어 있습니다.</p>
+          <br/>
+          <br/>
+          <div className="about-profile"><span className="brackets">&#123;</span></div>
+          <br/>
+          <div className="about-profile json-content"><span className="json-key"><span className="brackets">"</span>name<span className="brackets">"</span></span> : <span className="json-string"><span className="brackets">"</span>박재성<span className="brackets">"</span></span>,</div>
+          <div className="about-profile json-content"><span className="json-key"><span className="brackets">"</span>age<span className="brackets">"</span></span> : <span className="json-integer">28</span> ,</div>
+          <div className="about-profile json-content"><span className="json-key"><span className="brackets">"</span>address<span className="brackets">"</span></span> : <span className="json-string"><span className="brackets">"</span>인천광역시 서구<span className="brackets">"</span></span>,</div>
+          <div className="about-profile json-content"><span className="json-key"><span className="brackets">"</span>phone<span className="brackets">"</span></span> : <span className="json-string"><span className="brackets">"</span>+82 010-8324-6149<span className="brackets">"</span></span>,</div>
+          <div className="about-profile json-content"><span className="json-key"><span className="brackets">"</span>email<span className="brackets">"</span></span> : <span className="json-string"><span className="brackets">"</span>namic123123@naver.com<span className="brackets">"</span></span>,</div>
+          <br/>
+          <div className="about-profile"><span className="brackets">&#125;</span></div>
           {/*<a href="#" className="btn">Read More</a>*/}
         </div>
       </section>
@@ -142,13 +170,17 @@ function App(props) {
         <div className="skills-container">
 
           <div className="skills-box">
-            <i className='bx bxl-html5'></i>
-            <h3>Front-End</h3>
-            <a href="#" className="btn">Read More</a>
+            <h3>Frontend</h3>
+            <Image className="skill-logos" src={htmlLogo}/>
+            <Image className="skill-logos" src={cssLogo}/>
+            <Image className="skill-logos" src={jsLogo}/>
+            <Image className="skill-logos" src={reactLogo}/>
+            <Image className="skill-logos" src={axiosLogo} borderRadius={"20%"}/>
+            <Image className="skill-logos chakraLogo" src={chakraLogo} borderRadius={"20%"} h={"10rem"}/>
           </div>
           <div className="skills-box">
             <i className='bx bxl-html5'></i>
-            <h3>Back-End</h3>
+            <h3>Backend</h3>
             <a href="#" className="btn">Read More</a>
           </div>
           <div className="skills-box">
