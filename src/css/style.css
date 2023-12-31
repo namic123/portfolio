@@ -205,7 +205,7 @@ span{
     background: var(--second-bg-color);
 }
 .about .about-img{
-    margin-right: 2rem;
+    margin-right: 6rem;
 }
 
 .heading{
@@ -226,6 +226,12 @@ span{
     background-clip: text;
     color: transparent;
 }
+.about-quotes{
+    font-size: 2rem;
+    color:tomato;
+    margin-bottom: 2rem;
+}
+
 .about-content p{
     font-size: 1.6rem;
     font-weight: 600;
@@ -461,6 +467,7 @@ transition: .5s ease;
 @media (max-width:768px) {
     .home-img{
         margin-right: 0;
+        margin-top:5rem;
     }
 
     .home-content h3{

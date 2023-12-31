@@ -113,16 +113,17 @@ function App(props) {
           <h1>박재성 <span>입니다.</span></h1>
           <h3 className="typed-js">저는, <span ref={el}></span></h3>
           <br/>
-          <p>새로운 기술에 대한 <span>도전을 즐기고</span></p>
-          <p><span>효율적인 문제 해결을 추구</span>하는 신입 풀스택 개발자입니다.</p>
+          <p>기술에 대한 호기심과 새로움을 향한 도전은 제가 코딩을 즐기는 이유입니다.</p>
+          <p>창의적인 해결책을 찾는 과정은 저의 가장 큰 열정이며,</p>
+          <p>이를 통해 스스로의 기술적 한계를 뛰어넘는 데 큰 영감을 얻습니다. </p>
           <br/>
-          <p>코딩을 통해 <span>창의적인 해결책을 찾는 것</span>이 제 열정이며,</p>
-          <p>협업을 통해 더 <span>큰 가치를 창출</span>하고 서로의 <span>성장을 돕는 것</span>이 중요하다고 생각합니다.</p>
-          <br/>
+          <p>협업은 서로의 아이디어를 나누고 성장하는 데 있어 가장 중요한 부분이라고 믿습니다.</p>
+          <p>저의 열정이 팀과 프로젝트에 새로운 시각과 실질적인 개선을 가져올 수 있기를 기대합니다.</p>
+          <p>함께 성공을 만들어가는 과정에서 제 능력을 최대한 발휘하고자 합니다.</p>
           <br/>
           <br/>
           <p className="home-content-footer">저와 함께 새로운 도전을 시작해보시겠습니까?</p>
-          <div className="social-media">
+         <div className="social-media">
             <a href="https://github.com/namic123"><i className='bx bxl-github' ></i></a>
             <a href="https://pjs-world.tistory.com/">
               <FontAwesomeIcon icon={faBlog} /></a>
@@ -138,19 +139,17 @@ function App(props) {
         <div className="about-content">
           <h2 className="heading">About <span>Me</span></h2>
           <h3>FullStack Developer</h3>
-          <p>저의 취미는 운동입니다.</p>
-          <p>운동을 하면서 진정한 성장은 도전과 고통을 통해 이루어진다는 것을 깨달았습니다.</p>
+          <p className="about-quotes">"나를 죽이지 못하는 고통은, 나를 더욱 더 강하게 해줄 뿐이다."</p>
+          <p> 이 불후의 명언을 남긴 니체의 말은 제 삶의 모토이자 운동을 통해 실제로 경험하고 체득한 교훈입니다</p>
           <br/>
-          <p>코딩도 마찬가지라 생각합니다.</p>
-          <p>복잡한 문제를 해결하고 어려운 기술적 장벽을 넘어서면서,</p>
-          <p> 스스로가 한층 더 강해지고 성장하고 있음을 느끼고 있습니다.</p>
+          <p>운동을 통한 고통과 도전이 제 육체적, 정신적 강인함을 키운 것처럼,</p>
+          <p>프로그래밍의 복잡한 문제들과 기술적인 도전 또한 저를 성장시키는 중요한 요소로 자리잡았습니다.</p>
           <br/>
+          <p>코딩</p>
           <br/>
-          <p>저는 새로운 기술과 프로젝트에 대한 도전을 두려워하지 않습니다.</p>
-          <p>오히려, 그 안에서 발견되는 문제들과 그 해결 과정에서 큰 즐거움과 만족을 느낍니다.</p>
+
           <br/>
-          <p>저는 이러한 도전을 즐기며, 어떠한 기술적 난관도 극복할 준비가 되어 있습니다.</p>
-          <br/>
+        <br/>
           <br/>
           <div className="about-profile"><span className="brackets">&#123;</span></div>
           <br/>
