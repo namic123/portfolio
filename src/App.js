@@ -14,6 +14,8 @@ import githubLogo from "./img/GitHub-Logo.png";
 import tstoryLogo from "./img/tstoryLogo.png";
 import javaLogo from "./img/java-logo.png";
 import springBootLogo from "./img/springboot_logo.png";
+import mybatisLogo from "./img/mybatis-logo.png";
+import mariadbLogo from "./img/mariadb-logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBlog} from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
@@ -188,6 +190,9 @@ function App(props) {
             <h3>Backend</h3>
             <Image className="skill-logos" src={javaLogo}/>
             <Image className="skill-logos" src={springBootLogo} />
+            <Image className="skill-logos" src={mybatisLogo} />
+            <Image className="skill-logos" src={mariadbLogo} />
+            <Image className="skill-logos" src={jwtLogo} />
           </div>
           <div className="skills-box">
             <i className='bx bxl-html5'></i>
