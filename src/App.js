@@ -16,6 +16,12 @@ import javaLogo from "./img/java-logo.png";
 import springBootLogo from "./img/springboot_logo.png";
 import mybatisLogo from "./img/mybatis-logo.png";
 import mariadbLogo from "./img/mariadb-logo.png";
+import jwtLogo from "./img/jwt-logo.png";
+import gitLogo from "./img/git-logo.png";
+import ec2Logo from "./img/ec2-logo.png";
+import s3Logo from "./img/s3-logo.png";
+import rdsLogo from "./img/rds-logo.png";
+import postmanLogo from "./img/postman-logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBlog} from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
@@ -179,30 +185,35 @@ function App(props) {
 
           <div className="skills-box">
             <h3>Frontend</h3>
-            <Image className="skill-logos" src={htmlLogo}/>
+            <div className="skill-logo-box">
+              <Image className="skill-logos" src={htmlLogo}/>
+              <div className="skill-logo-layer" >
+                <h3>HTML</h3>
+              </div>
+            </div>
             <Image className="skill-logos" src={cssLogo}/>
             <Image className="skill-logos" src={jsLogo}/>
             <Image className="skill-logos" src={reactLogo}/>
-            <Image className="skill-logos" src={axiosLogo} borderRadius={"20%"}/>
-            <Image className="skill-logos chakraLogo" src={chakraLogo} borderRadius={"20%"} h={"10rem"}/>
-          </div>
+            <Image className="skill-logos" src={axiosLogo} />
+            <Image className="skill-logos chakraLogo" src={chakraLogo}  h={"10rem"}/>
+            </div>
+
           <div className="skills-box">
             <h3>Backend</h3>
             <Image className="skill-logos" src={javaLogo}/>
             <Image className="skill-logos" src={springBootLogo} />
+            <Image className="skill-logos" src={jwtLogo} />
             <Image className="skill-logos" src={mybatisLogo} />
             <Image className="skill-logos" src={mariadbLogo} />
-            <Image className="skill-logos" src={jwtLogo} />
           </div>
           <div className="skills-box">
-            <i className='bx bxl-html5'></i>
-            <h3>More</h3>
-            <a href="#" className="btn">Read More</a>
-          </div>
-          <div className="skills-box">
-            <i className='bx bxl-html5'></i>
-            <h3>More</h3>
-            <a href="#" className="btn">Read More</a>
+            <h3>Tools</h3>
+            <Image className="skill-logos" src={gitLogo}  h={"10rem"}/>
+            <Image className="skill-logos" src={ec2Logo}  h={"10rem"}/>
+            <Image className="skill-logos" src={s3Logo}  h={"10rem"}/>
+            <Image className="skill-logos" src={rdsLogo}  h={"10rem"}/>
+            <Image className="skill-logos" src={githubLogo}  h={"10rem"}/>
+            <Image className="skill-logos" src={postmanLogo}  h={"10rem"}/>
           </div>
         </div>
       </section>
