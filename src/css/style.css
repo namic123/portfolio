@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Allura&family=DM+Serif+Display:ital@1&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +14,8 @@
     --bg-color :#1f242d;
     --second-bg-color :#323946;
     --text-color :#dcdcdc;
-    --main-color :#0ef;
+    --main-color : #cea4ff;
+    --main-gradient:linear-gradient(109.6deg, rgb(218, 185, 252) 11.2%, rgb(125, 89, 252) 91.1%);
 }
 
 html{
@@ -59,22 +62,30 @@ section{
 }
 
 .logo{
-    font-size: 2.5rem;
-    color:var(--text-color);
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 700;
     cursor:default;
+    font-family: Allura;
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .navbar a{
-    font-size:1.7rem;
+    font-size:2.5rem;
     color:var(--text-color);
     margin-left: 4rem;
     transition: .3s;
+    font-family: Aladin;
 }
 
 .navbar a:hover,
 .navbar a.active{
-    color:var(--main-color);
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
@@ -128,7 +139,10 @@ section{
 }
 
 span{
-    color:var(--main-color);
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .home-content h1 {
@@ -154,7 +168,10 @@ span{
 .home-content .home-content-footer{
     font-size: 1.8rem;
     font-weight: 700;
-   color:var(--main-color);
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .social-media a {
@@ -164,18 +181,22 @@ span{
     width: 4rem;
     height: 4rem;
     background: transparent;
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     border-top: .2rem solid var(--main-color);
     border-radius: 50%;
     font-size: 2rem;
-    color:var(--main-color);
+    color: var(--main-color);
     margin:3rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
 
 .social-media a:hover {
-    background: var(--main-color);
+    background: var(--main-gradient);
     color:var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
 }
 
 
@@ -210,9 +231,12 @@ span{
 
 .heading{
     text-align: center;
-    font-size: 4.5rem;
-}
+    font-size: 4.9rem;
 
+}
+.subject{
+    font-family: DM Serif Display;
+}
 .about-content h2{
     text-align: left;
     line-height: 1.2;
@@ -221,7 +245,7 @@ span{
 .about-content h3{
     font-size: 2.6rem;
     margin-bottom: 2rem;
-    background-image: linear-gradient(#DEB0DF, #A168FE);
+    background-image: var(--main-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

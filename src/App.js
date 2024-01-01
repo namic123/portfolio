@@ -102,7 +102,7 @@ function App(props) {
   return (
     <div className="container">
       <header className={`header ${isSticky ? 'sticky' : ''}`}>
-        <a href="#" className="logo">JaySung</a>
+        <a href="#" className="logo">ParkJaySung</a>
         <i className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon" onClick={toggleMenu}></i>
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
           <a href="#home" className={activeSection === 'home' ? 'active' : ''} >Intro</a>
@@ -148,7 +148,7 @@ function App(props) {
         </div>
         <div className="about-content">
           <h2 className="heading">About <span>Me</span></h2>
-          <h3>FullStack Developer</h3>
+          <h3 className="subject">FullStack Developer</h3>
           <p className="about-quotes">"나를 죽이지 못하는 고통은, 나를 더욱 더 강하게 해줄 뿐이다."</p>
           <p>니체의 이 불후의 명언은 제 삶의 모토이자 운동을 통해 실제로 경험하고 체득한 교훈입니다</p>
           <br/>
