@@ -12,6 +12,8 @@ import chakraLogo from "./img/chakra-logo.png";
 import project1 from "./img/project1.png";
 import githubLogo from "./img/GitHub-Logo.png";
 import tstoryLogo from "./img/tstoryLogo.png";
+import javaLogo from "./img/java-logo.png";
+import springBootLogo from "./img/springboot_logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBlog} from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
@@ -183,9 +185,9 @@ function App(props) {
             <Image className="skill-logos chakraLogo" src={chakraLogo} borderRadius={"20%"} h={"10rem"}/>
           </div>
           <div className="skills-box">
-            <i className='bx bxl-html5'></i>
             <h3>Backend</h3>
-            <a href="#" className="btn">Read More</a>
+            <Image className="skill-logos" src={javaLogo}/>
+            <Image className="skill-logos" src={springBootLogo} />
           </div>
           <div className="skills-box">
             <i className='bx bxl-html5'></i>
