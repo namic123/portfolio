@@ -1,6 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./css/style.css";
-import {Button, Image} from "@chakra-ui/react";
+import {
+  Button,
+  Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent, ModalFooter,
+  ModalHeader,
+  ModalOverlay, useDisclosure
+} from "@chakra-ui/react";
 import homePic from "./img/KakaoTalk_20231228_142341381.jpg";
 import mainPic from "./img/KakaoTalk_20231227_025533035-removebg.png";
 import htmlLogo from "./img/html-logo.png";
@@ -45,6 +54,9 @@ function App(props) {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const el = useRef(null);
+
+  /*Chakra UI Modal*/
+  let chootubeModal = useDisclosure();
 
   /* React 스크롤 Reveal*/
   useEffect(() => {
@@ -488,14 +500,26 @@ function App(props) {
                 나만 아는 재밌는, 유익한 유튜버를 모두에게 알리고 싶다.
                 나와 비슷한 관심사를 가진 사람들의 알고리즘이 궁금하다.
               </p>
-              <Button className="project-btn" variant={"link"} onClick={}>
+              <Button className="project-btn" variant={"link"} onClick={chootubeModal.onOpen}>
                 더보기
               </Button>
               {/*----ChooTube Modal 시작-------------------*/}
-
-              <a href="http://3.39.233.240:8082/">
-                더보기
-              </a>
+              <Modal onClose={chootubeModal.onClose} size={"full"} isOpen={chootubeModal.isOpen} >
+                <ModalOverlay />
+                <ModalContent>
+                  <ModalHeader>Modal Title</ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                  하이하이
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button onClick={chootubeModal.onClose}>Close</Button>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
+              {/*<a href="http://3.39.233.240:8082/">*/}
+              {/*  더보기*/}
+              {/*</a>*/}
             </div>
           </div>
         </div>

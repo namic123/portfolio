@@ -514,7 +514,7 @@ transition: .5s ease;
     color: transparent;
 }
 .project-btn:hover{
-
+    transform:scale(1.1);
     cursor: pointer;
 }
 /*.project-layer a{*/
