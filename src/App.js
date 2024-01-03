@@ -6,9 +6,11 @@ import {
   Modal,
   ModalBody,
   ModalCloseButton,
-  ModalContent, ModalFooter,
+  ModalContent,
+  ModalFooter,
   ModalHeader,
-  ModalOverlay, useDisclosure
+  ModalOverlay,
+  useDisclosure,
 } from "@chakra-ui/react";
 import homePic from "./img/KakaoTalk_20231228_142341381.jpg";
 import mainPic from "./img/KakaoTalk_20231227_025533035-removebg.png";
@@ -35,6 +37,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBlog } from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
+import { ChootubeModal } from "./project-modal/ChootubeModal";
 
 function App(props) {
   useEffect(() => {
@@ -496,23 +499,93 @@ function App(props) {
             <div className="project-layer">
               <h4>ChooTube</h4>
               <p>
-                늘 비슷한 것만 추천하는 유튜브 알고리즘에 한계를 느낀다.
-                나만 아는 재밌는, 유익한 유튜버를 모두에게 알리고 싶다.
-                나와 비슷한 관심사를 가진 사람들의 알고리즘이 궁금하다.
+                늘 비슷한 것만 추천하는 유튜브 알고리즘에 한계를 느낀다. 나만
+                아는 재밌는, 유익한 유튜버를 모두에게 알리고 싶다. 나와 비슷한
+                관심사를 가진 사람들의 알고리즘이 궁금하다.
               </p>
-              <Button className="project-btn" variant={"link"} onClick={chootubeModal.onOpen}>
+              <button className="project-btn" onClick={chootubeModal.onOpen}>
                 더보기
-              </Button>
+              </button>
               {/*----ChooTube Modal 시작-------------------*/}
-              <Modal onClose={chootubeModal.onClose} size={"full"} isOpen={chootubeModal.isOpen} >
+              <Modal
+                onClose={chootubeModal.onClose}
+                isOpen={chootubeModal.isOpen}
+                size={"5xl"}
+                bg={""}
+              >
                 <ModalOverlay />
-                <ModalContent>
-                  <ModalHeader>Modal Title</ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody>
-                  하이하이
+                <ModalContent p={0}>
+                  <ModalHeader bg={"#1f242d"}>
+                    <div className="modal-header">ChooTube</div>
+                  </ModalHeader>
+                  <ModalCloseButton
+                    color={"#dcdcdc"}
+                    fontSize={"1.4rem"}
+                    pt={3}
+                    pr={2}
+                  />
+                  <ModalBody bg={"#323946"}>
+                    <ChootubeModal />
+                    <div className="modal-info">
+                      <h2 className="modal-info-heading">Summary</h2>
+                      <p className="modal-info-content">
+                        늘 비슷한 것만 추천하는 유튜브 알고리즘에 한계를 느낀다.
+                        나만 아는 재밌는, 유익한 유튜버를 모두에게 알리고 싶다.
+                        나와 비슷한 관심사를 가진 사람들의 알고리즘이 궁금하다.
+                      </p>
+                      <br />
+                      <h2 className="modal-info-heading">Overview</h2>
+                      <p className="modal-info-content">
+                        이 프로젝트는 유튜브 알고리즘의 한계를 극복하고 사용자
+                        간의 고유한 취향과 관심사를 공유할 수 있는 커뮤니티
+                        플랫폼입니다. 유튜브의 기존 추천 시스템이 종종
+                        제한적이고 반복적인 콘텐츠를 제공하는 데 반해, 이
+                        플랫폼은 다양하고 풍부한 콘텐츠 발굴을 촉진합니다.
+                        사용자들은 자신만의 독특한 발견을 공유하고, 비슷한
+                        관심사를 가진 다른 사용자들의 추천을 탐색할 수 있습니다.
+                        이는 유튜브 시청 경험을 개인화하고, 커뮤니티 기반의
+                        상호작용을 통해 새로운 콘텐츠를 발견하는 새로운 방식을
+                        제공합니다.
+                      </p>
+                      <br />
+                      <h2 className="modal-info-heading">Key Features</h2>
+                      <br />
+                      <h4> 개인화된 추천 공유</h4>
+                      <p className="modal-info-content">
+                        <span className="emphasis">*</span>사용자는 자신이
+                        발견한 독특하고 흥미로운 유튜브 콘텐츠를 공유할 수
+                        있습니다.
+                      </p>
+                      <h4> 관심사 기반 커뮤니티</h4>
+                      <p className="modal-info-content">
+                        <span className="emphasis">*</span>비슷한 관심사를 가진
+                        사용자들과 정보를 교류하고 새로운 콘텐츠를 추천받을 수
+                        있습니다.
+                      </p>
+                      <h4> 유저 중심의 인터페이스</h4>
+                      <p className="modal-info-content">
+                        <span className="emphasis">*</span>사용자 친화적인
+                        디자인으로 누구나 쉽게 참여하고 추천을 공유할 수
+                        있습니다.
+                      </p>
+                      <br />
+                      <h2 className="modal-info-heading">Overview</h2>
+                      <p className="modal-info-content">
+                        이 프로젝트는 유튜브 알고리즘의 한계를 극복하고 사용자
+                        간의 고유한 취향과 관심사를 공유할 수 있는 커뮤니티
+                        플랫폼입니다. 유튜브의 기존 추천 시스템이 종종
+                        제한적이고 반복적인 콘텐츠를 제공하는 데 반해, 이
+                        플랫폼은 다양하고 풍부한 콘텐츠 발굴을 촉진합니다.
+                        사용자들은 자신만의 독특한 발견을 공유하고, 비슷한
+                        관심사를 가진 다른 사용자들의 추천을 탐색할 수 있습니다.
+                        이는 유튜브 시청 경험을 개인화하고, 커뮤니티 기반의
+                        상호작용을 통해 새로운 콘텐츠를 발견하는 새로운 방식을
+                        제공합니다.
+                      </p>
+                    </div>
+                    <div className="modal-info">바이</div>
                   </ModalBody>
-                  <ModalFooter>
+                  <ModalFooter bg={"#1f242d"}>
                     <Button onClick={chootubeModal.onClose}>Close</Button>
                   </ModalFooter>
                 </ModalContent>
