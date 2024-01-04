@@ -312,7 +312,10 @@ background-image: var(--second-gradient);
     border-color:var(--main-color);
     transform:scale(1.02);
 }
-
+.repository-img{
+    display:flex;
+    justify-content: center;
+}
 .repository-img .repository-image{
     width: 10vw;
     background-color: white;

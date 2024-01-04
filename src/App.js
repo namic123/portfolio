@@ -530,7 +530,13 @@ function App(props) {
                     <ChootubeModal />
                   </ModalBody>
                   <ModalFooter bg={"#1f242d"}>
-                    <Button onClick={chootubeModal.onClose}>Close</Button>
+                    <Button
+                      fontSize="2rem"
+                      variant={"link"}
+                      onClick={chootubeModal.onClose}
+                    >
+                      닫기
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
@@ -542,8 +548,7 @@ function App(props) {
               <h4>Web Portfolio</h4>
               <p>
                 기술에 대한 호기심과 새로움을 향한 도전은 제가 코딩을 즐기는
-                이유입니다. 창의적인 해결책을 찾는 과정은 저의 가장 큰 열정이며,
-                이를 통해 스스로의 기술적 한계를 뛰어넘는 데 큰 영감을 얻습니다.
+                이유입니다.
               </p>
               <button className="project-btn">더보기</button>
               {/*---- Portfolio Modal 시작-------------------*/}
@@ -587,19 +592,19 @@ function App(props) {
               <Image className="repository-image" src={githubLogo} />
             </div>
             <h3>GitHub</h3>
-
+            <div></div>
             <a href="#" className="btn">
-              Read More
+              방문하기
             </a>
           </div>
           <div className="repository-box">
             <div className="repository-img">
               <Image className="repository-image" src={tstoryLogo} />
             </div>
-            <h3>T-Story</h3>
+            <h3>Tistory</h3>
 
             <a href="#" className="btn">
-              Read More
+              방문하기
             </a>
           </div>
         </div>
