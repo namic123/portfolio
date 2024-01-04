@@ -1,0 +1,189 @@
+/* Project Modal */
+.modal-header{
+    font-size: 3rem;
+    font-family: Allura;
+    background-image: var(--second-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.modal-info{
+    padding:2rem 2rem;
+}
+.modal-info-heading{
+    font-size:2.3rem;
+    font-family: Frank Ruhl Libre;
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.modal-info-content{
+    padding:1rem 1rem;
+    font-size:1.5rem;
+    color:var(--text-color);
+    /*font-weight: 700;*/
+}
+.modal-info h4{
+    padding:0 0.5rem;
+    font-size:1.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.emphasis{
+    padding-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    color:tomato;
+}
+.modal-info-skills{
+    display: flex;
+    align-items: center;
+    /*margin: 1rem 0;*/
+}
+.modal-info-skills h4{
+    font-size:1.8rem;
+    font-family: Frank Ruhl Libre;
+    padding-left: 1rem;
+}
+.modal-info-skills p{
+    font-size: 1.6rem;
+    color:var(--text-color);
+
+}
+.modal-info-content a{
+    color: #77C5F2;
+}
+.modal-info-content a:hover {
+    text-decoration: underline #77C5F2;
+}
+
+.modal-info-tasks{
+    padding: 0 3rem;
+}
+
+.modal-info-tasks .project-task h3{
+    font-size: 2.5rem;
+    color:var(--text-color);
+    margin-bottom: 2rem;
+}
+
+
+.project-task-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    width:20vw;
+    overflow:hidden;
+    display: flex;
+    margin-bottom: 2.7rem;
+}
+
+.project-task-box .project-task-images{
+    transition: .5s ease;
+}
+
+
+.project-task-box:hover .project-task-images-image{
+    transform: scale(1.1);
+}
+.project-task-images{
+    opacity: 0.8;
+}
+.project-task-images{
+    width:100%;
+}
+
+.project-task-images {
+    cursor: pointer;
+}
+
+.project-task-box .project-task-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(rgba(0,0,0,.4),var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding :0 4rem;
+    transform:translateY(100%);
+}
+.project-task-layer h2{
+    font-size: 2rem;
+    color: white;
+}
+
+.project-task-box:hover .project-task-layer{
+    transform:translateY(0);
+}
+
+.project-task p{
+    font-size: 1.7rem;
+    color:var(--text-color);
+}
+
+.project-task span{
+    color:tomato;
+    font-weight: bold;
+}
+
+.project-task p ul{
+    padding-top: 1rem;
+    padding-left: 3rem;
+}
+.project-task p h4{
+    margin: 2rem 0;
+    display: inline;
+    font-weight: bold;
+}
+/*image modal */
+.project-modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project-modal-content {
+    display: flex;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 2% auto;
+    border: 1px solid #888;
+    width: 40vw;
+}
+/*.project-modal-content img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+.project-close-button {
+  position:absolute;
+    top:0;
+    right: 0;
+    color: #aaaaaa;
+    padding-right: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.project-close-button:hover,
+.project-close-button:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+

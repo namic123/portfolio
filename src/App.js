@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./css/style.css";
+import "./css/project-modal.css";
 import {
   Button,
   Image,
@@ -21,6 +22,7 @@ import reactLogo from "./img/react-logo.png";
 import axiosLogo from "./img/axios-logo.png";
 import chakraLogo from "./img/chakra-logo.png";
 import project1 from "./img/project1.png";
+import project2 from "./img/project2.png";
 import githubLogo from "./img/GitHub-Logo.png";
 import tstoryLogo from "./img/tstoryLogo.png";
 import javaLogo from "./img/java-logo.png";
@@ -447,7 +449,7 @@ function App(props) {
             </div>
           </div>
           <div className="skills-box">
-            <h3>Tools</h3>
+            <h3>etc.</h3>
             <div className="skill-logo-box">
               <Image className="skill-logos" src={gitLogo} h={"10rem"} />
               <div className="skill-logo-layer">
@@ -532,9 +534,44 @@ function App(props) {
                   </ModalFooter>
                 </ModalContent>
               </Modal>
-              {/*<a href="http://3.39.233.240:8082/">*/}
-              {/*  더보기*/}
-              {/*</a>*/}
+            </div>
+          </div>
+          <div className="project-box">
+            <Image src={project2} className="project-image" />
+            <div className="project-layer">
+              <h4>Web Portfolio</h4>
+              <p>
+                기술에 대한 호기심과 새로움을 향한 도전은 제가 코딩을 즐기는
+                이유입니다. 창의적인 해결책을 찾는 과정은 저의 가장 큰 열정이며,
+                이를 통해 스스로의 기술적 한계를 뛰어넘는 데 큰 영감을 얻습니다.
+              </p>
+              <button className="project-btn">더보기</button>
+              {/*---- Portfolio Modal 시작-------------------*/}
+              {/*<Modal*/}
+              {/*  onClose={chootubeModal.onClose}*/}
+              {/*  isOpen={chootubeModal.isOpen}*/}
+              {/*  size={"5xl"}*/}
+              {/*  bg={""}*/}
+              {/*>*/}
+              {/*  <ModalOverlay />*/}
+              {/*  <ModalContent p={0}>*/}
+              {/*    <ModalHeader bg={"#1f242d"}>*/}
+              {/*      <div className="modal-header">ChooTube</div>*/}
+              {/*    </ModalHeader>*/}
+              {/*    <ModalCloseButton*/}
+              {/*      color={"#dcdcdc"}*/}
+              {/*      fontSize={"1.4rem"}*/}
+              {/*      pt={3}*/}
+              {/*      pr={2}*/}
+              {/*    />*/}
+              {/*    <ModalBody bg={"#323946"}>*/}
+              {/*      <ChootubeModal />*/}
+              {/*    </ModalBody>*/}
+              {/*    <ModalFooter bg={"#1f242d"}>*/}
+              {/*      <Button onClick={chootubeModal.onClose}>Close</Button>*/}
+              {/*    </ModalFooter>*/}
+              {/*  </ModalContent>*/}
+              {/*</Modal>*/}
             </div>
           </div>
         </div>

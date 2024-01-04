@@ -451,10 +451,9 @@ background-image: var(--second-gradient);
 
 .project-box .project-image{
     width:100%;
-transition: .5s ease;
+    transition: .5s ease;
 }
 
-.
 
 .project-box:hover .project-image{
     transform: scale(1.1);
@@ -499,7 +498,6 @@ transition: .5s ease;
     margin: .3rem 0 1rem;
     font-family: Frank Ruhl Libre;
     font-weight: 700;
-
 }
 .project-layer a{
     font-size:2rem;
@@ -519,45 +517,7 @@ transition: .5s ease;
     cursor: pointer;
 }
 
-/* Project Modal */
-.modal-header{
-    font-size: 3rem;
-    font-family: Allura;
-    background-image: var(--second-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.modal-info{
-    padding:2rem 2rem;
-}
-.modal-info-heading{
-    font-size:2.3rem;
-    font-family: Frank Ruhl Libre;
-    background-image: var(--main-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
 
-.modal-info-content{
-    padding:1rem 1rem;
-    font-size:1.5rem;
-    color:var(--text-color);
-    /*font-weight: 700;*/
-}
-.modal-info h4{
-    padding:0 0.5rem;
-    font-size:1.6rem;
-    color: var(--text-color);
-    font-weight: 700;
-}
-.emphasis{
-    padding-left: 1rem;
-    margin-right: 1rem;
-    font-weight: bold;
-    color:tomato;
-}
 /*.project-layer a{*/
 /*    display: inline-flex;*/
 /*    justify-content: center;*/
