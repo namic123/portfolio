@@ -42,7 +42,8 @@ html{
 
 section{
     min-height: 100vh;
-    padding:10rem 9% 2rem;
+    padding:9rem 9% 2rem;
+
 }
 
 .header{
@@ -300,6 +301,9 @@ background-image: var(--second-gradient);
 
 .repository-container .repository-box{
     flex: 1 1 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -327,8 +331,12 @@ background-image: var(--second-gradient);
 }
 
 .repository-box p{
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+    font-weight: bold;
 }
 /*------------ Skills---------------*/
 
@@ -536,6 +544,67 @@ background-image: var(--second-gradient);
     color: var(--second-bg-color);
 }
 
+.contact{
+    background: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact .contact-box{
+    border-radius: 10%;
+    background-color: var(--bg-color);
+    padding: 4rem 5rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contact p{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.contact h3{
+    font-size: 2rem;
+}
+
+/*.footer{*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*    padding-bottom: 5rem;*/
+/*    padding-right: 5rem;*/
+/*}*/
+.footer-iconTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    font-size: 3rem;
+    margin-top: 2.4rem;
+    animation: floatFooter 3s ease-in-out infinite;
+}
+
+@keyframes floatFooter {
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-1.5rem);
+        transform:translateY(1.5rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
 /* 반응형 */
 @media (max-width:1200px) {
     html{
@@ -555,7 +624,7 @@ background-image: var(--second-gradient);
         padding: 2rem 3%;
     }
     section{
-        padding: 6rem 3% 2rem;
+        padding: 4rem 3% 2rem;
     }
     .skills{
         padding-bottom: 7rem;

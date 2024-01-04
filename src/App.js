@@ -36,7 +36,7 @@ import s3Logo from "./img/s3-logo.png";
 import rdsLogo from "./img/rds-logo.png";
 import postmanLogo from "./img/postman-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBlog } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faBlog } from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 import { ChootubeModal } from "./project-modal/ChootubeModal";
@@ -592,8 +592,17 @@ function App(props) {
               <Image className="repository-image" src={githubLogo} />
             </div>
             <h3>GitHub</h3>
-            <div></div>
-            <a href="#" className="btn">
+            <p>
+              제 Github 저장소는 제 개인적인 작업물과 학습 과정에서 얻은 지식을
+              기록하는 중요한 공간입니다. 프로젝트 소스 코드, 실험적인 코드
+              조각, 그리고 개발 관련 학습 자료들이 이곳에 저장되어 있습니다.{" "}
+              <br />
+              <br /> 이 저장소는 제가 개발자로서 성장해 나가는 과정을 보여주는
+              디지털 아카이브 역할을 합니다. 또한, 이곳에 저장된 코드와 문서들은
+              향후 프로젝트에 대한 이해도를 높이고, 개발 기술을 다듬는 데 도움을
+              줍니다.
+            </p>
+            <a href="https://github.com/namic123" className="btn">
               방문하기
             </a>
           </div>
@@ -602,19 +611,63 @@ function App(props) {
               <Image className="repository-image" src={tstoryLogo} />
             </div>
             <h3>Tistory</h3>
-
-            <a href="#" className="btn">
+            <p>
+              저의 개인 블로그는 제가 개발 공부를하며 배운 지식과 경험을
+              공유하는 공간입니다. 여기에서는 제가 공부한 개발 관련 주제들을
+              정리하고, 이를 다른 사람들과 공유하고자 합니다. <br />
+              <br /> 블로그 글들은 제가 공부한 개념을 명확히 이해하고 정리하는
+              과정을 통해, 제 지식을 확장하고 다른 이들에게도 도움을 제공하는
+              것을 목표로 합니다. 이 블로그는 저의 학습 여정을 기록하고, 개발
+              커뮤니티와 지식을 공유하는 플랫폼으로 자리매김하고 있습니다.
+            </p>
+            <a href="https://pjs-world.tistory.com/" className="btn">
               방문하기
             </a>
           </div>
         </div>
       </section>
-      {/*footer*/}
-      <footer className="footer">
-        <div className="footer-iconTop">
-          <a href="#home"></a>
+      <section className="contact" id="contact" ref={contactRef}>
+        <h2 className="heading">
+          Contact <span>Me!</span>
+        </h2>
+        <div className="contact-box">
+          <p>
+            새로운 환경과 도전에 빠르게 적응하는 것은 저의 가장 큰 장점 중
+            하나입니다. <br /> 프로그래밍과 개발에 대한 제 열정은 어떠한
+            어려움에도 굴하지 않고, 항상 최선의 결과를 만들어내는 데 도움이
+            됩니다.
+          </p>
+          <br />
+          <p>
+            팀의 목표와 비전에 부합하는 개발자가 되기 위해, 지속적으로 학습하고,
+            적응하며, 혁신을 추구하겠습니다. 제 끈기와 열정이 팀에 새로운 활력을
+            불어넣고, 함께 성장할 수 있는 기회를 만들 것입니다.
+          </p>
+          <br />
+          <p>
+            만약 여러분의 팀이나 프로젝트에 지속적으로 도전하는 마인드와 열정이
+            필요하다면, 저는 그 역할을 충실히 수행할 준비가 되어 있습니다. 저와
+            함께라면 어떠한 어려움도 극복할 수 있으리라 확신합니다.
+          </p>
+          <br />
+          <br />
+          <h3>연락처:010-8324-6149</h3>
+          <h3>이메일:namic123123@naver.com</h3>
         </div>
-      </footer>
+        <div className="footer-iconTop">
+          <a href="#home">
+            <FontAwesomeIcon icon={faArrowUp} />
+          </a>
+        </div>
+      </section>
+      {/*/!*footer*!/*/}
+      {/*<footer className="footer">*/}
+      {/*  <div className="footer-iconTop">*/}
+      {/*    <a href="#home">*/}
+      {/*      <FontAwesomeIcon icon={faArrowUp} />*/}
+      {/*    </a>*/}
+      {/*  </div>*/}
+      {/*</footer>*/}
     </div>
   );
 }
