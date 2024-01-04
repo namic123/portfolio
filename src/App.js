@@ -40,6 +40,7 @@ import { faArrowUp, faBlog } from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 import { ChootubeModal } from "./project-modal/ChootubeModal";
+import { WebPortfolioModal } from "./project-modal/WebPortfolioModal";
 
 function App(props) {
   useEffect(() => {
@@ -62,6 +63,7 @@ function App(props) {
 
   /*Chakra UI Modal*/
   let chootubeModal = useDisclosure();
+  let portfolioModal = useDisclosure();
 
   /* React 스크롤 Reveal*/
   useEffect(() => {
@@ -550,33 +552,41 @@ function App(props) {
                 기술에 대한 호기심과 새로움을 향한 도전은 제가 코딩을 즐기는
                 이유입니다.
               </p>
-              <button className="project-btn">더보기</button>
+              <button className="project-btn" onClick={portfolioModal.onOpen}>
+                더보기
+              </button>
               {/*---- Portfolio Modal 시작-------------------*/}
-              {/*<Modal*/}
-              {/*  onClose={chootubeModal.onClose}*/}
-              {/*  isOpen={chootubeModal.isOpen}*/}
-              {/*  size={"5xl"}*/}
-              {/*  bg={""}*/}
-              {/*>*/}
-              {/*  <ModalOverlay />*/}
-              {/*  <ModalContent p={0}>*/}
-              {/*    <ModalHeader bg={"#1f242d"}>*/}
-              {/*      <div className="modal-header">ChooTube</div>*/}
-              {/*    </ModalHeader>*/}
-              {/*    <ModalCloseButton*/}
-              {/*      color={"#dcdcdc"}*/}
-              {/*      fontSize={"1.4rem"}*/}
-              {/*      pt={3}*/}
-              {/*      pr={2}*/}
-              {/*    />*/}
-              {/*    <ModalBody bg={"#323946"}>*/}
-              {/*      <ChootubeModal />*/}
-              {/*    </ModalBody>*/}
-              {/*    <ModalFooter bg={"#1f242d"}>*/}
-              {/*      <Button onClick={chootubeModal.onClose}>Close</Button>*/}
-              {/*    </ModalFooter>*/}
-              {/*  </ModalContent>*/}
-              {/*</Modal>*/}
+              <Modal
+                onClose={portfolioModal.onClose}
+                isOpen={portfolioModal.isOpen}
+                size={"5xl"}
+                bg={""}
+              >
+                <ModalOverlay />
+                <ModalContent p={0}>
+                  <ModalHeader bg={"#1f242d"}>
+                    <div className="modal-header">Web Portfolio</div>
+                  </ModalHeader>
+                  <ModalCloseButton
+                    color={"#dcdcdc"}
+                    fontSize={"1.4rem"}
+                    pt={3}
+                    pr={2}
+                  />
+                  <ModalBody bg={"#323946"}>
+                    <WebPortfolioModal />
+                  </ModalBody>
+                  <ModalFooter bg={"#1f242d"}>
+                    <Button
+                      fontSize="2rem"
+                      variant={"link"}
+                      onClick={portfolioModal.onClose}
+                    >
+                      닫기
+                    </Button>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
             </div>
           </div>
         </div>

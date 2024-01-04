@@ -589,7 +589,7 @@ background-image: var(--second-gradient);
     background-color: black;
     font-size: 3rem;
     margin-top: 2.4rem;
-    animation: floatFooter 3s ease-in-out infinite;
+    animation: floatFooter 2s ease-in-out infinite;
 }
 
 @keyframes floatFooter {
