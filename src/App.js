@@ -41,6 +41,7 @@ import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 import { ChootubeModal } from "./project-modal/ChootubeModal";
 import { WebPortfolioModal } from "./project-modal/WebPortfolioModal";
+import { Helmet } from "react-helmet";
 
 function App(props) {
   useEffect(() => {
@@ -146,6 +147,12 @@ function App(props) {
 
   return (
     <div className="container">
+      <div>
+        <Helmet>
+          <title>박재성 웹 포트폴리오</title>
+        </Helmet>
+        {/* 페이지 내용 */}
+      </div>
       <header className={`header ${isSticky ? "sticky" : ""}`}>
         <a href="#" className="logo">
           ParkJaySung
