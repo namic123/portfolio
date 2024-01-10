@@ -370,7 +370,6 @@ function App(props) {
           <div className="about-profile">
             <span className="brackets">&#125;</span>
           </div>
-          {/*<a href="#" className="btn">Read More</a>*/}
         </div>
       </section>
       {/*Skill 화면*/}
