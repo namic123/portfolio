@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fa561408.css",
-    "main.js": "/portfolio/static/js/main.1d176156.js",
+    "main.js": "/portfolio/static/js/main.a9f20e50.js",
     "static/media/project1.png": "/portfolio/static/media/project1.846d0236f8447271e5cb.png",
     "static/media/KakaoTalk_20231227_025533035-removebg.png": "/portfolio/static/media/KakaoTalk_20231227_025533035-removebg.cd23b800b5837bdf564f.png",
     "static/media/minihomepy.png": "/portfolio/static/media/minihomepy.a26d5fba2ca1ffdd41e3.png",
     "static/media/project2.png": "/portfolio/static/media/project2.ddb98d3478cca39aa4d9.png",
+    "static/media/박재성.pdf": "/portfolio/static/media/박재성.ebc122c2d92efa11326e.pdf",
     "static/media/minihomepy-favorite.png": "/portfolio/static/media/minihomepy-favorite.b911c547e195c8757d43.png",
     "static/media/minihomepy-comment.png": "/portfolio/static/media/minihomepy-comment.c021aeac67f5fd71a488.png",
     "static/media/KakaoTalk_20231228_142341381.jpg": "/portfolio/static/media/KakaoTalk_20231228_142341381.114dfea137747399c156.jpg",
@@ -36,10 +37,10 @@
     "static/media/login-profile.png": "/portfolio/static/media/login-profile.cab069a9d874a7a20246.png",
     "index.html": "/portfolio/index.html",
     "main.fa561408.css.map": "/portfolio/static/css/main.fa561408.css.map",
-    "main.1d176156.js.map": "/portfolio/static/js/main.1d176156.js.map"
+    "main.a9f20e50.js.map": "/portfolio/static/js/main.a9f20e50.js.map"
   },
   "entrypoints": [
     "static/css/main.fa561408.css",
-    "static/js/main.1d176156.js"
+    "static/js/main.a9f20e50.js"
   ]
 }
