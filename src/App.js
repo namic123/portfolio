@@ -35,6 +35,7 @@ import ec2Logo from "./img/ec2-logo.png";
 import s3Logo from "./img/s3-logo.png";
 import rdsLogo from "./img/rds-logo.png";
 import postmanLogo from "./img/postman-logo.png";
+import myResume from "./resume/박재성.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faBlog } from "@fortawesome/free-solid-svg-icons";
 import ScrollReveal from "scrollreveal";
@@ -243,7 +244,7 @@ function App(props) {
               <FontAwesomeIcon icon={faBlog} />
             </a>
           </div>
-          <a href="#" className="btn">
+          <a href={myResume} className="btn" download>
             이력서 다운로드
           </a>
         </div>
